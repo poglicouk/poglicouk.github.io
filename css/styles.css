@@ -21,6 +21,7 @@ body {
 
 .content {
     position: sticky;
+    position: -webkit-sticky;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -47,8 +48,11 @@ body {
 	
 }
 
-.googles p {
-  display: inline-block;
-  width: 25%;
-  margin: 10px 10px;
-  border: 1px solid #2980b9; }
+.content2 {
+    position: sticky;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;	
+	
+	
+}
