@@ -9,7 +9,16 @@
 	</head>
 	
 	<body>
-	<embed src="music.mp3" autostart="true" loop="true" hidden="true" volume="0.2">  
+		
+	<audio autoplay id="myaudio">
+  	<source src="music.mp3">
+	</audio>
+
+	<script>
+  	var audio = document.getElementById("myaudio");
+  	audio.volume = 0.2;
+	</script>
+		
 	<form method="get" action="http://www.google.com/search"> 
 					<input class='search' name='q' autocomplete="off" type='text' placeholder='S E A R C H'/> 
 					
