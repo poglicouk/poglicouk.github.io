@@ -1,0 +1,12 @@
+NEW
+
+<video id="myVideo" preload="auto" loop="" autoplay="">
+		<source id="played" src="columbine.mp4" type="video/mp4">
+</video>
+
+OLD
+
+
+<video onloadstart="this.volume=0.3" autoplay loop id="myVideo">
+	<source src="columbine.mp4" type="video/webm">
+</video>
