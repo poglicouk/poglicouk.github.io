@@ -13,30 +13,10 @@
 <body>
 
 <video onloadstart="this.volume=0.3" autoplay loop id="myVideo">
-	<source src="" type="video/webm">
-	Your browser does not support HTML5 video.
+	<source src="columbine.mp4" type="video/webm">
 </video>
-	
-<script>
-var videoStorage = [ 
-    'Victory_or_ValhallaCUTVIDEO.mp4',
-    'azovwave.webm',
-    'columbine.mp4',
-    'peacekeeper.mp4'
-],
-    video = document.querySelector('video'),
-    // choose one random url from our storage as the active video
-    activeVideoUrl = videoStorage[Math.round(Math.random() * (videoStorage.length - 1))];        
-        
-// check which file extension your browser can play and set the video source accordingly
-if(video.canPlayType('video/webm')) {
-    video.setAttribute('src', activeVideoUrl + '.webm');
-} else if(video.canPlayType('video/mp4')) {
-    video.setAttribute('src', activeVideoUrl + '.mp4');
-}
-    /*}
-}*/
-</script>
+
+
 
 <div class="content">
 	<h1></h1>
