@@ -19,6 +19,21 @@
 <button onclick="toggleMute();">
 Toggle
 </button>
+	
+<script> 
+function toggleMute() {
+
+var video=document.getElementById("myVideo");
+
+if(video.muted){
+  video.muted = false;
+} else {
+  video.muted = true;
+}
+
+}
+	
+</script>
 
 <div class="content">
 	<h1></h1>
