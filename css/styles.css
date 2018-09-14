@@ -9,6 +9,12 @@ body {
     font-size: 17px;
 }
 
+button {
+
+    background: transparent;
+    border: none !important;
+}
+
 #myVideo {
     position: fixed;
     right: 0;
