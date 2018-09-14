@@ -9,8 +9,16 @@ body {
     font-size: 17px;
 }
 
-button {
-    background: ;
+.button {
+    border: none;
+    color: white;
+    padding: 1px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 2px;
+    cursor: pointer;
 }
 
 #myVideo {
