@@ -9,7 +9,6 @@
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
-    z-index: 950;
 }
   
   
@@ -59,7 +58,6 @@ p, li, a {
   display: inline-block;
   width: 20%;
   margin: 0 15px;
-  z-index: 900;
   vertical-align: text-top; }
 
 .list ul {
