@@ -3,18 +3,16 @@
   margin: 0;
   padding: 0; }
 
-  #backgroundVideo {
+  #myVideo {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
+    z-index: 950;
 }
   
   
-html {
-  background: url(../img/background.jpg) center center no-repeat;
-  background-size: cover; }
 
 *::-webkit-input-placeholder {
   opacity: 0.3; }
@@ -61,6 +59,7 @@ p, li, a {
   display: inline-block;
   width: 20%;
   margin: 0 15px;
+  z-index: 900;
   vertical-align: text-top; }
 
 .list ul {
