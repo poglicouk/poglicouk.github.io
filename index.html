@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
 
-<link rel="shortcut icon" type="image/x-icon" href="tablogo.png" />
-<link rel='stylesheet' type='text/css' href='css/styles.css'/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<title>Home</title>
+		<link rel='stylesheet' type='text/css' href='css/homepage.css'/>
+		<link rel='stylesheet' type='text/css' href='css/fonts.css'/>
+		<script type='text/javascript' src='js/fonticon.js'></script>
+		
+		<link rel="shortcut icon" type="image/x-icon" href="tablogo.png" />
+		<link rel='stylesheet' type='text/css' href='css/styles.css'/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	</head>
+	
+	<body>
+		
+	<video id="myVideo" onloadstart="this.volume=0.3" preload="auto" loop autoplay muted data-autoplay>
+		<source id="played" src="videoplayback.mp4" type="video/mp4">
+	</video>
+	<div>a
+		<script>document.getElementById("player").volume = 0.2</script>
+		<button onclick="document.getElementById('player').play()">Play</button>
+		<button onclick="document.getElementById('player').pause()">Pause</button>
+	</div> 
+	
+		
+	<form method="get" action="http://www.google.com/search"> 
+					<input class='search' name='q' autocomplete="off" type='text' placeholder='S E A R C H'/> 
+					
+				</form>
+				
+		<div class='total-container'>
+			<div class='container'>
+				<div class='favorites'>
+					<div class='list fav-dev'>
+					
+						<p>Daily</p>
+						<ul>
+							<li><a href='http://www.Google.com'>Google</a></li>
+							<li><a href='https://youtube.com'>Youtube</a></li>
+							<li><a href='https://steamcommunity,com/user/thecat_'>Steam</a></li>
+							<li><a href='http://www.reddit.com'>Reddit</a></li>
+							<li><a href='https://messenger.com'>Messenger</a></li>
+						</ul>
+					</div>
 
-<style>
+				<div class='googles'>
+				
+		</div>
+	</body>
+</html>
 
-</style>
+
+
+
 </head>
 <body>
 
-<video id="myVideo" onloadstart="this.volume=0.3" preload="auto" loop autoplay muted data-autoplay>
-		<source id="played" src="videoplayback.mp4" type="video/mp4">
-</video>
-	
-<script> 
-function toggleMute() {
-
-var video=document.getElementById("myVideo");
-
-if(video.muted){
-  video.muted = false;
-} else {
-  video.muted = true;
-}
-
-}
-	</script>
 	
 <div class="content">
 	<h1></h1>
