@@ -17,10 +17,7 @@
 		<button onclick="document.getElementById('player').pause()">Pause</button>
 	</div> 
 		
-	<!-- The video -->
-	<video onloadstart="this.volume=0.3" preload="auto" loop autoplay muted data-autoplay id="myVideo">
-  	<source src="videoplayback.mp4" type="video/mp4">
-	</video>
+	
 		
 	<form method="get" action="http://www.google.com/search"> 
 					<input class='search' name='q' autocomplete="off" type='text' placeholder='S E A R C H'/> 
@@ -44,5 +41,11 @@
 				<div class='googles'>
 				
 		</div>
+						
+		<!-- The video -->
+		<video onloadstart="this.volume=0.3" preload="auto" loop autoplay muted data-autoplay id="myVideo">
+  		<source src="videoplayback.mp4" type="video/mp4">
+		</video>
+		
 	</body>
 </html>
