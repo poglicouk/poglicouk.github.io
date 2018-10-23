@@ -1,11 +1,11 @@
-
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,200);
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: "Roboto", "Arial";
     font-size: 24px;
 }
 
@@ -27,7 +27,7 @@ body {
     width: 100%;
 	text-align: center;
     padding: 15px;
-	font: 15px Lucida Console, sans-serif;
+	font: 24px Roboto ,Lucida Console, sans-serif;
 	text-decoration: none;
 	color: #f35626;
     background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
@@ -56,25 +56,3 @@ body {
 	
 	
 }
-
-/*
-     FILE ARCHIVED ON 02:13:34 Sep 02, 2018 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 22:08:01 Oct 23, 2018.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  LoadShardBlock: 58.771 (3)
-  esindex: 0.008
-  captures_list: 74.349
-  CDXLines.iter: 11.905 (3)
-  PetaboxLoader3.datanode: 87.795 (4)
-  exclusion.robots: 0.209
-  exclusion.robots.policy: 0.193
-  RedisCDXSource: 0.616
-  PetaboxLoader3.resolve: 23.873
-  load_resource: 84.053
-*/
