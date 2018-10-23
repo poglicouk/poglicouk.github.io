@@ -1,121 +1,80 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,200);
-* {
-  margin: 0;
-  padding: 0; }
 
-  #myVideo {
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#myVideo {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
+	filter:grayscale(90%);
+	filter:brightness(50%);
 }
-  
-  
 
-*::-webkit-input-placeholder {
-  opacity: 0.3; }
-  
+.content {
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+	text-align: center;
+    padding: 15px;
+	font: 15px Lucida Console, sans-serif;
+	text-decoration: none;
+	color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 10s infinite linear;
+}
 
-.total-container {
-  height: 100vh;
-  width: 100%;
-  //background: #000;
-  opacity: 1;
-  font-size: 12px;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased; }
+@-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    
+    to {
+      -webkit-filter: hue-rotate(360deg);
+    }
+}
+	
+}
 
-p, li, a {
-  color: white;
-  font-family: "Roboto", "Consolas", "Helvetica", sans-serif;
-  font-weight: 400;
-  letter-spacing: 2px; }
+.content2 {
+    position: sticky;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;	
+	
+	
+}
 
-.container {
-  height: 340px;
-  width: 90%;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
+/*
+     FILE ARCHIVED ON 02:13:34 Sep 02, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:08:01 Oct 23, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
-.favorites {
-  width: 90%;
-  margin: 10px auto 0 auto;
-  text-align: center; }
-
-.favorites p {
-  border-bottom: 1px solid gold;
-  padding-right: 100%; }
-
-.list {
-  display: inline-block;
-  width: 20%;
-  margin: 0 15px;
-  vertical-align: text-top; }
-
-.list ul {
-  list-style-type: none; }
-
-a {
-  text-decoration: none;
-  display: block;
-  padding: 3px; }
-  a:hover {
-    color: #fff;
-    background: grey; }
-
-.googles {
-  width: 90%;
-  margin: 25px auto;
-  text-align: center; }
-
-.googles p {
-  display: inline-block;
-  width: 25%;
-  margin: 10px 10px;
-  border: 1px solid gold; }
-
-form {
-  width: 90%;
-  margin: auto;
-  padding: 5px;
-  text-align: center;
-  position: relative; }
-
-.search {
-font-size: 24px;
-padding: 7px;
-height: 20px;
-outline: none;
-border-style: solid;
-border-width: 0 0 1px 0;
-border-color: #555;
-color: white;
-background-color: rgba(0, 0, 0, .0);
-opacity: 1;
-max-width: 1200px;
-width: 100%;
-text-align: center;
-   }
-   
-   
-.go {
-  height: 27px;
-  width: 40px;
-  background: #fff;
-  color: #2980b9;
-  border: 1px solid #2980b9; }
-  .go:hover {
-    background: grey;
-    color: #fff;
-    cursor: pointer; }
-  .go:focus {
-    outline: none; }
-
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 58.771 (3)
+  esindex: 0.008
+  captures_list: 74.349
+  CDXLines.iter: 11.905 (3)
+  PetaboxLoader3.datanode: 87.795 (4)
+  exclusion.robots: 0.209
+  exclusion.robots.policy: 0.193
+  RedisCDXSource: 0.616
+  PetaboxLoader3.resolve: 23.873
+  load_resource: 84.053
+*/
