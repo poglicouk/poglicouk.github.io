@@ -6,47 +6,27 @@
 		<link rel='stylesheet' type='text/css' href='css/index.css'/>
 		<link rel='stylesheet' type='text/css' href='css/fonts.css'/>
 		<script type='text/javascript' src='js/fonticon.js'></script>
-	</head>
+</head>
 	
-	<body>
+	
+<body>
+	<video id="myVideo" onloadstart="this.volume=0.3" preload="auto" loop="" autoplay="" data-autoplay="">
+		<source id="played" src="videoplayback.mp4" type="video/mp4">
+	</video>
+	
+	
+	
+	<div class="content">
+		
+		<h1></h1>
+		<p><a href="https://steamcommunity.com/id/thecat_">STEAM</a> || 
+		<a href="https://www.youtube.com/user/PoGLightning">YOUTUBE </a>|| 
+		<a href="pages/startpage.html">STARTPAGE</a></p>
+		
+	</div>	
 
-		<div class='total-container'>
-			<div class='container'>
-				<div class='favorites'>
-					<div class='list fav-dev'>
-					
-						<p>.pogli</p>
-						<ul>
-							<li><a href='http://www.Google.com'>Google</a></li>
-							<li><a href='https://www.youtube.com/user/PoGLightning/'>Youtube</a></li>
-							<li><a href='https://steamcommunity.com/user/thecat_'>Steam</a></li>
-							<li><a href='ts3server://POG.TEAMSPEAK3.COM'>Teamspeak</a></li>
-							<li><a href='http://www.reddit.com'>Reddit</a></li>
-						</ul>
+</body>
+
+
 	
-				<div class='googles'>
-				
-		</div>		
-		
-	<audio id="player" src="videoplayback.mp4"></audio>
-	<div>
-		<script>document.getElementById("player").volume = 0.2</script>
-		<button onclick="document.getElementById('player').play()">Play</button>
-		<button onclick="document.getElementById('player').pause()">Pause</button>
-	</div> 
-		
-	
-		
-	<form method="get" action="http://www.google.com/search"> 
-					<input class='search' name='q' autocomplete="off" type='text' placeholder='S E A R C H'/> 
-					
-				</form>
-				
-						
-		<!-- The video -->
-		<video onloadstart="this.volume=0.3" preload="auto" loop autoplay muted data-autoplay id="myVideo">
-  		<source src="videoplayback.mp4" type="video/mp4">
-		</video>
-		
-	</body>
 </html>
