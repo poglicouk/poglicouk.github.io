@@ -6,7 +6,7 @@
 body {
     margin: 0;
     font-family: "Roboto", "Arial";
-    font-size: 24px;
+    font-size: 20px;
 }
 
 #myVideo {
@@ -27,7 +27,7 @@ body {
     width: 100%;
 	text-align: center;
     padding: 15px;
-	font: 24px Roboto ,Lucida Console, sans-serif;
+	font: 20px Roboto ,Lucida Console, sans-serif;
 	text-decoration: none;
 	color: #f35626;
     background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
