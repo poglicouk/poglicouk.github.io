@@ -177,9 +177,9 @@ TextScramble = function () {
 // ——————————————————————————————————————————————————
 
 var phrases = [
-'Welcome',
-'to POGLI.XYZ',
-'enjoy my useless website.',
+'welcome',
+'to pogli.xyz',
+'enjoy my useless website',
 'pogli@airmail.cc',
 ''];
 
