@@ -1,0 +1,199 @@
+<html>
+<title>console</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+﻿<style>
+body {
+   background-image: url("nesnasimtuhlepicovinu.gif");
+   background-color: #cccccc;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+
+.terminal-window {
+  margin: auto;
+  width: 600px;
+  height: 360px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.terminal-window header {
+  background: #E0E8F0;
+  height: 30px;
+  border-radius: 8px 8px 0 0;
+  padding-left: 10px;
+}
+
+.terminal-window header .button {
+  width: 12px;
+  height: 12px;
+  margin: 10px 4px 0 0;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.terminal-window header .button.green {
+  background: #3BB662;
+}
+
+.terminal-window header .button.yellow {
+  background: #E5C30F;
+}
+
+.terminal-window header .button.red {
+  background: #E75448;
+}
+
+.terminal-window section.terminal {
+  color: white;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  font-size: 11pt;
+  background: #30353A;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  bottom: 0;
+  overflow: auto;
+}
+
+.terminal-window section.terminal .typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.terminal-data { display: none; }
+.terminal-window .gray { color: gray; }
+.terminal-window .green { color: green;}
+</style>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="terminal-window">
+  <header>
+    <div class="button green"></div>
+    <div class="button yellow"></div>
+    <div class="button red"></div>
+  </header>
+  <section class="terminal">
+    <div class="history"></div>
+    $&nbsp;<span class="prompt"></span>
+    <span class="typed-cursor"></span>
+    
+  </section>
+</div>
+<!-- data -->
+  <div class="terminal-data mimik-run-output">
+ <br>Welcome<br>
+ ----------------------------------------------<br>
+ Pogli's Site<br><br> 
+
+ &nbsp;&nbsp;Content:<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span> <a class="gray" href="http://pogli.xyz" style="text-decoration:none">home</a><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span> <a class="gray" href="http://steam.pogli.xyz" style="text-decoration:none">steam</a><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span> <a class="gray" href="http://mb.pogli.xyz" style="text-decoration:none">playlist</a><br>
+ <br>
+    <span class="gray">&nbsp;---------- ------- ------- -------- --------</span><br>
+&nbsp;&nbsp;Appname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode&nbsp;&nbsp;&nbsp;&nbsp;pid&nbsp;&nbsp;&nbsp;&nbsp;Status&nbsp;&nbsp;&nbsp;Memory<br>
+    <span class="gray">&nbsp;---------- ------- ------- -------- --------</span><br>
+&nbsp;&nbsp;&nbsp;pogli&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xyz&nbsp;&nbsp;&nbsp;&nbsp;9233&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">online</span>&nbsp;&nbsp;&nbsp;&nbsp;11 MB      <br>
+  <br>
+&nbsp;&nbsp;<span class="green">Poglixyz Has Successfully Launched</span><br>
+  <br>
+  </div>
+<script src="jquery.min.js"></script><script src="typed.custom.js"></script>
+<script>$(function() {
+  var data = [
+  { 
+    action: 'type',
+    strings: ["npm install -g poglixyz^400"],
+    output: '<span class="gray">+poglixyz@1.0 installed</span><br>&nbsp;',
+    postDelay: 1000
+  },
+  { 
+    action: 'type',
+    strings: ["cd poglixyz^400"],
+    output: ' ',
+    postDelay: 1000
+  },
+  { 
+    action: 'type',
+    strings: ['pogli xyz^400'],
+    output: $('.mimik-run-output').html()
+  },
+  { 
+    action: 'type',
+    strings: ["placeholer stuff^400:","​","​","pogli's site^600","not sure what i'll do with this^400", ''],
+    output: '',
+    postDelay: 2000
+  }
+];
+  runScripts(data, 0);
+});
+
+function runScripts(data, pos) {
+    var prompt = $('.prompt'),
+        script = data[pos];
+    if(script.clear === true) {
+      $('.history').html(''); 
+    }
+    switch(script.action) {
+        case 'type':
+          // cleanup for next execution
+          prompt.removeData();
+          $('.typed-cursor').text('');
+          prompt.typed({
+            strings: script.strings,
+            typeSpeed: 30,
+            callback: function() {
+              var history = $('.history').html();
+              history = history ? [history] : [];
+              history.push('$ ' + prompt.text());
+              if(script.output) {
+                history.push(script.output);
+                prompt.html('');
+                $('.history').html(history.join('<br>'));
+              }
+              // scroll to bottom of screen
+              $('section.terminal').scrollTop($('section.terminal').height());
+              // Run next script
+              pos++;
+              if(pos < data.length) {
+                setTimeout(function() {
+                  runScripts(data, pos);
+                }, script.postDelay || 1000);
+              }
+            }
+          });
+          break;
+        case 'view':
+
+          break;
+    }
+}
+</script>
+</div>
+<audio autoplay loop>
+  <source src="acedia.mp3" type="audio/mpeg">
+</audio>
+</html>
